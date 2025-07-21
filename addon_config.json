@@ -1,0 +1,27 @@
+{
+  "name": "MyPV Heizstab Interface",
+  "description": "Web interface for MyPV Heizstab devices with CORS proxy",
+  "version": "1.0.0",
+  "slug": "mypv-heizstab",
+  "init": false,
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "services",
+  "boot": "auto",
+  "ingress": true,
+  "ingress_port": 8080,
+  "panel_icon": "mdi:heat-wave",
+  "panel_title": "MyPV Heizstab",
+  "panel_admin": false,
+  "apparmor": true,
+  "options": {
+    "device_ip": "192.168.1.100",
+    "device_port": 80,
+    "log_level": "info"
+  },
+  "schema": {
+    "device_ip": "str",
+    "device_port": "int(1,65535)",
+    "log_level": "list(trace|debug|info|notice|warning|error|fatal)"
+  },
+  "image": "ghcr.io/home-assistant/{arch}-addon-base-python:3.11-alpine3.18"
+}

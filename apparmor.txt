@@ -1,0 +1,82 @@
+#include <tunables/global>
+
+profile mypv-heizstab flags=(attach_disconnected,mediate_deleted) {
+  #include <abstractions/base>
+
+  # Capabilities
+  capability,
+  file,
+  signal (send) set=(kill,term,int,hup,cont),
+
+  # S6-Overlay
+  /init ix,
+  /bin/** ix,
+  /usr/bin/** ix,
+  /run/{s6,s6-rc*,service}/** ix,
+  /package/** ix,
+  /command/** ix,
+  /etc/services.d/** rwix,
+  /etc/cont-init.d/** rwix,
+  /etc/cont-finish.d/** rwix,
+  /run/{,**} rwk,
+  /dev/tty rw,
+
+  # Bashio
+  /usr/lib/bashio/** ix,
+  /tmp/** rwk,
+
+  # Access to addon data folder
+  /data/** rw,
+
+  # Access to addon options
+  /data/options.json r,
+
+  # Python environment
+  /usr/bin/python3 ix,
+  /usr/lib/python3*/** r,
+  /usr/local/lib/python3*/** r,
+  
+  # Application files
+  /app/** r,
+  /app/proxy_server.py r,
+  /app/static/** r,
+
+  # Logs
+  /share/logs/ r,
+  /share/logs/** rw,
+
+  # DNS and networking
+  /etc/resolv.conf r,
+  /etc/hosts r,
+  /etc/nsswitch.conf r,
+  /etc/ssl/certs/ca-certificates.crt r,
+  
+  # Network access for proxy functionality
+  network inet dgram,
+  network inet stream,
+  network inet6 dgram,
+  network inet6 stream,
+
+  # System information
+  /proc/sys/kernel/hostname r,
+  /proc/sys/kernel/osrelease r,
+  /proc/version r,
+  /sys/class/net/ r,
+  /sys/devices/virtual/net/** r,
+
+  # Temporary files
+  /tmp/ rw,
+  /tmp/** rwk,
+  /var/tmp/ rw,
+  /var/tmp/** rwk,
+
+  # Deny dangerous paths
+  deny @{PROC}/{*,**^[0-9*],sys/kernel/shm*} rwklx,
+  deny /sys/[^f]*/** rwklx,
+  deny /sys/f[^s]*/** rwklx,
+  deny /sys/fs/[^c]*/** rwklx,
+  deny /sys/fs/c[^g]*/** rwklx,
+  deny /sys/fs/cg[^r]*/** rwklx,
+  deny /sys/firmware/** rwklx,
+  deny /sys/kernel/security/** rwklx,
+}
