@@ -17,9 +17,9 @@ Ein  Addon, das die MyPV-App in Home Assistant integriert.
 
 ## Installation
 
-[![Installiere das Addon](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fsilas229%ha-mypv)
+[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fsilas229%2Fha-mypv)
 
-1. Füge dieses [Repository](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fsilas229%ha-mypv) zu deinen Home Assistant Addon-Repositories hinzu (oder klicke auf den oberen Button)
+1. Füge dieses [Repository](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fsilas229%2Fha-mypv) zu deinen Home Assistant Addon-Repositories hinzu (oder klicke auf den oberen Button)
 2. Installiere das "MyPV" Addon
 3. Konfiguriere die IP-Adresse deines Heizstabs
 4. Starte das Addon

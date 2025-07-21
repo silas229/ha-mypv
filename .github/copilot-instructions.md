@@ -15,7 +15,7 @@ This is a Home Assistant Addon project that provides a web interface for MyPV He
 
 ## Key Features
 
-- Proxies MyPV device API calls (*.jsn endpoints)
+- Proxies MyPV device API calls (\*.jsn endpoints)
 - Handles CORS headers properly
 - Configurable device IP address
 - Web interface accessible through Home Assistant
@@ -24,6 +24,7 @@ This is a Home Assistant Addon project that provides a web interface for MyPV He
 ## API Endpoints
 
 The addon proxies these MyPV device endpoints:
+
 - `/mypv_dev.jsn` - Device information
 - `/data.jsn` - Current sensor data
 - `/chart.jsn` - Chart/historical data
