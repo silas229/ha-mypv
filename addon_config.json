@@ -1,8 +1,8 @@
 {
-  "name": "MyPV Heizstab Interface",
-  "description": "Web interface for MyPV Heizstab devices with CORS proxy",
+  "name": "MyPV",
+  "description": "Web interface for MyPV devices with CORS proxy",
   "version": "1.0.0",
-  "slug": "mypv-heizstab",
+  "slug": "mypv",
   "init": false,
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "services",

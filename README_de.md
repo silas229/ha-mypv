@@ -1,11 +1,15 @@
-# MyPV Heizstab Home Assistant Addon
+# MyPV Home Assistant Addon
 
-Ein Home Assistant Addon, das als Proxy für MyPV Heizstab-Geräte fungiert und CORS-Probleme umgeht.
+Ein  Addon, das die MyPV-App in Home Assistant integriert.
+
+## Unterstützte Geräte
+
+- MyPV ELWA 2
+- Steuere gerne die HTML-Seite für ein anderes Modell bei
 
 ## Features
 
 - Web-Interface für MyPV Heizstab
-- CORS-Proxy-Funktionalität
 - Konfigurierbare Geräte-IP
 - Home Assistant Ingress-Integration
 - Seitenleisten-Integration
@@ -13,10 +17,12 @@ Ein Home Assistant Addon, das als Proxy für MyPV Heizstab-Geräte fungiert und 
 
 ## Installation
 
-1. Fügen Sie dieses Repository zu Ihren Home Assistant Addon-Repositories hinzu
-2. Installieren Sie das "MyPV Heizstab Interface" Addon
-3. Konfigurieren Sie die IP-Adresse Ihres Heizstabs
-4. Starten Sie das Addon
+[![Installiere das Addon](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fsilas229%ha-mypv)
+
+1. Füge dieses [Repository](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fsilas229%ha-mypv) zu deinen Home Assistant Addon-Repositories hinzu (oder klicke auf den oberen Button)
+2. Installiere das "MyPV" Addon
+3. Konfiguriere die IP-Adresse deines Heizstabs
+4. Starte das Addon
 
 ## Konfiguration
 

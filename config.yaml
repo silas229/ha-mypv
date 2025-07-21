@@ -1,7 +1,7 @@
-name: MyPV Heizstab Interface
+name: MyPV
 version: "1.0.0"
-slug: mypv-heizstab
-description: A web interface for MyPV Heizstab with CORS proxy functionality
+slug: mypv
+description: A web interface for MyPV devices with CORS proxy functionality
 url: https://github.com/your-username/mypv-addon
 arch:
   - armhf
@@ -15,7 +15,7 @@ init: false
 ingress: true
 ingress_port: 8080
 panel_icon: mdi:heat-wave
-panel_title: MyPV Heizstab
+panel_title: MyPV
 panel_admin: false
 apparmor: true
 options:
